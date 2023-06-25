@@ -3,10 +3,10 @@ from tflite_support.metadata_writers import image_segmenter
 from tflite_support.metadata_writers import writer_utils
 
 # Set the path to the directory containing the TFLite models
-MODEL_PATH = "tflite/mnv3Large_6/"
+MODEL_PATH = "tflite/mnv3Large_7/"
 
 # Task Library expects label files that are in the same format as the one below.
-LABEL_FILE = "labelmap.txt"
+LABEL_FILE = "labelmap_6class.txt"
 
 # Normalization parameters are required when reprocessing the image. It is
 # optional if the image pixel values are in the range of [0, 255] and the input
@@ -29,7 +29,7 @@ for file_name in os.listdir(MODEL_PATH):
         print(writer.get_metadata_json())
 
         # Set the path to save the TFLite file with metadata
-        save_to_path = os.path.join("tflite_metadata/mnv3Large_6/", file_name.replace(".tflite", "_metadata.tflite"))
+        save_to_path = os.path.join("tflite_metadata/mnv3Large_7/", file_name.replace(".tflite", "_metadata.tflite"))
 
         # Populate the metadata into the model.
         writer_utils.save_file(writer.populate(), save_to_path)

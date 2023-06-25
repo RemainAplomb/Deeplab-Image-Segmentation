@@ -20,9 +20,12 @@ def create_cityscapes_label_colormap():
   colormap[3] = [0, 0, 255]
   colormap[4] = [0, 255, 255]
   colormap[5] = [255, 0, 255]
-  colormap[6] = [0, 87, 150]
-  colormap[7] = [150, 0, 87]
-  colormap[8] = [87, 0, 255]
+
+
+
+  # colormap[6] = [0, 87, 150]
+  # colormap[7] = [150, 0, 87]
+  # colormap[8] = [87, 0, 255]
 
   return colormap
 
@@ -55,11 +58,11 @@ def label_to_color_image(label):
 
 
 # Set the path to the directory containing the .pb files
-MODEL_PATH = "pb/mnv3Large_6/"
+MODEL_PATH = "pb/mnv3Large_7/"
 
-TFLITE_PATH = "tflite/mnv3Large_6/"
+TFLITE_PATH = "tflite/mnv3Large_7/"
 
-IMAGE_PATH = "images/mnv3Large_6/"
+IMAGE_PATH = "images/mnv3Large_7/"
 
 # Iterate over all files in the MODEL_PATH directory
 for file_name in os.listdir(MODEL_PATH):
